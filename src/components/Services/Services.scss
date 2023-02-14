@@ -11,6 +11,11 @@
   .header__title {
     font-size: 3.5rem;
     font-weight: 500;
+
+    @include cus(900) {
+      width: 100%;
+      text-align: center;
+    }
   }
   .header__arrow {
     display: flex;

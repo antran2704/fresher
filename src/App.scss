@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.container-L {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-S {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// color
+$text-color: #000000;
+$desc-color: #666666;
+$blue-color: #277cfb;
+
+// responsive
+$mobile-width: 425px;
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+// style-scroll
+@mixin scroll() {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+    overflow-y: overlay;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow-y: overlay;
+  }
+}
+
+@mixin scrollHidden() {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 6px;
+    overflow-y: overlay;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow-y: overlay;
+  }
+} ;

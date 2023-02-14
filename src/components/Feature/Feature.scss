@@ -1,0 +1,99 @@
+@import "../../App.scss";
+
+#fearture {
+  background-color: #f2f8ff;
+  padding: 40px 0;
+
+  .feature__content {
+  }
+  .feature__header {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .feature__content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include cus(800px) {
+      flex-direction: column;
+      gap: 60px;
+      -webkit-column-gap: 60px;
+    }
+  }
+  .feature__img {
+    width: 50%;
+    max-height: 600px;
+    object-fit: contain;
+
+    @include cus(800px) {
+      width: 80%;
+    }
+  }
+  .feature__list {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    -webkit-column-gap: 10px;
+
+    @include cus(800px) {
+      width: 100%;
+    }
+  }
+  .feature__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    -webkit-column-gap: 10px;
+
+    &.active {
+      .item__header-number {
+        color: white;
+        background-color: $blue-color;
+      }
+      .item__content-title {
+        color: $blue-color;
+      }
+    }
+  }
+  .item__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item__header-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: $blue-color;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 50%;
+    border: 1px solid $blue-color;
+    cursor: pointer;
+  }
+  .item__arrow {
+    width: 22px;
+    height: 90px;
+  }
+  .item__content {
+    width: 100%;
+  }
+  .item__content-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $text-color;
+    cursor: pointer;
+  }
+  .item__content-desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: $desc-color;
+  }
+}

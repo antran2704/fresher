@@ -1,0 +1,108 @@
+@import "../../../App.scss";
+
+.content__item {
+  .content__item-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      @include cus(800px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @include cus(800px) {
+      flex-direction: column;
+      gap: 40px;
+      -webkit-column-gap: 40px;
+    }
+  }
+
+  .item__img {
+    width: 50%;
+    height: auto;
+
+    @include cus(800px) {
+      width: 80%;
+    }
+  }
+
+  .content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    -webkit-column-gap: 20px;
+
+    @include cus(800px) {
+      width: 100%;
+    }
+  }
+
+  .content__title {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: $text-color;
+
+    @include cus(800px) {
+      text-align: center;
+    }
+  }
+  .content__desc {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $desc-color;
+    line-height: 1.8;
+
+    @include cus(800px) {
+      text-align: center;
+    }
+  }
+  .content__app {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    -webkit-column-gap: 20px;
+
+    @include cus(800px) {
+      justify-content: center;
+    }
+
+    .app__img {
+      width: 50%;
+      max-width: 200px;
+      height: 64px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .content__more {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    .more__text {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $blue-color;
+      text-decoration: underline;
+    }
+    .more__icon {
+      font-size: 2.6rem;
+      color: $blue-color;
+      margin-top: 6px;
+    }
+  }
+}

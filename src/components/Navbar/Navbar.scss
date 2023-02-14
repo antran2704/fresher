@@ -1,0 +1,149 @@
+@import "../../App.scss";
+
+#navbar {
+  position: relative;
+  width: 100%;
+  max-height: 90px;
+  background-color: #383d40;
+  padding: 9px 0;
+  z-index: 9999;
+
+  @include cus(900px) {
+    position: fixed;
+    height: 90px;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .navbar__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    @include cus(900px) {
+      &.show {
+        .navbar__list {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        .navbar__layout {
+          opacity: 1;
+          pointer-events: inherit;
+        }
+      }
+    }
+  }
+
+  // Navbar btn on mobile
+  .navbar__btn {
+    display: none;
+    margin-left: auto;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include cus(900px) {
+      display: block;
+    }
+
+    .navbar__btn-icon {
+      font-size: 3rem;
+      color: $white-color;
+    }
+  }
+
+  .navbar__list-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $blue-color;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+
+    @include cus(900px) {
+      display: flex;
+    }
+  }
+  .header__title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $white-color;
+  }
+  .header__icon {
+    font-size: 3rem;
+    color: $white-color;
+    cursor: pointer;
+  }
+
+  .navbar__layout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: all linear 0.2s;
+    z-index: 9998;
+  }
+
+  .navbar__logo {
+    width: 184px;
+    height: 73px;
+
+    @include mobile {
+      width: 140px;
+      height: 60px;
+    }
+  }
+  .navbar__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 50px;
+    -webkit-column-gap: 50px;
+
+    @include cus(900px) {
+      position: fixed;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 60%;
+      background-color: white;
+      gap: 4px;
+      -webkit-column-gap: 4px;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: all linear 0.2s;
+      z-index: 9999;
+    }
+
+    @include mobile {
+        width: 90%;
+    }
+  }
+  .list__item {
+    @include cus(900px) {
+      width: 100%;
+    }
+    a {
+      width: 100%;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $white-color;
+      padding: 10px;
+
+      @include cus(900px) {
+        color: $desc-color;
+        padding: 10px 20px;
+      }
+    }
+  }
+}

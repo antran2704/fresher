@@ -12,13 +12,23 @@ import NextArrow from "./NextArrow";
 function Services() {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     arrows: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      }
+    ]
   };
   return (
     <section id="services" className="container-S">
@@ -30,6 +40,102 @@ function Services() {
       </div>
       <ul className="services__list">
         <Slider {...settings}>
+          <li className="services__item">
+            <img
+              src={images.services.cleaning}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Cleaning</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.appliances}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Appliances</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.houseHold}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Household</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.electronic}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Electronic</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.cleaning}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Cleaning</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.appliances}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Appliances</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.houseHold}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Household</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
+          <li className="services__item">
+            <img
+              src={images.services.electronic}
+              alt="services"
+              className="services__item-img"
+            />
+            <p className="services__item-title">Electronic</p>
+            <p className="services__item-desc">Experience</p>
+            <button className="services__item-btn">
+              <a href="/">Tìm hiểu thêm</a>
+            </button>
+          </li>
           <li className="services__item">
             <img
               src={images.services.cleaning}

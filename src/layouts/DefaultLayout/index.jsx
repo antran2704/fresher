@@ -1,7 +1,11 @@
 import images from "../../assets/images";
+import Business from "../../components/Business";
 import ChooseUs from "../../components/ChooseUs";
+import Contact from "../../components/Contact";
 import ContentItem from "../../components/Content/ContentItem";
 import Feature from "../../components/Feature";
+import Feedback from "../../components/Feedback";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Services from "../../components/Services";
@@ -30,6 +34,10 @@ function DefaultLayout() {
       />
       <ChooseUs />
       <Services />
+      <Business />
+      <Feedback />
+      <Contact />
+      <Footer />
     </div>
   );
 }

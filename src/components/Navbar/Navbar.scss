@@ -10,6 +10,9 @@
 
   @include cus(900px) {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 90px;
     top: 0;
     right: 0;

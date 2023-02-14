@@ -1,6 +1,8 @@
 const images = {
   logo: require("./logo.png"),
   arrow: require("./Arrow.png"),
+  star: require("./Star.png"),
+  noStar: require("./noStar.png"),
   apps: {
     appStore: require("./apps/AppStore.png"),
     chPlay: require("./apps/ChPlay.png"),

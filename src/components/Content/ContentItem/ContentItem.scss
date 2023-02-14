@@ -30,6 +30,10 @@
     @include cus(800px) {
       width: 80%;
     }
+
+    @include cus(600px) {
+      width: 100%;
+    }
   }
 
   .content {
@@ -60,10 +64,6 @@
     font-weight: 400;
     color: $desc-color;
     line-height: 1.8;
-
-    @include cus(800px) {
-      text-align: center;
-    }
   }
   .content__app {
     width: 100%;

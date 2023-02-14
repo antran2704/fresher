@@ -1,56 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Noto Sans", sans-serif;
-  overflow-x: hidden;
-}
-
-button, input {
-  outline: none;
-  border: none;
-}
-
-
-
-a {
-  display: block;
-  text-decoration: none;
-}
-
-ul, li {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.container-L {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.container-S {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 // color
 $text-color: #000000;
 $desc-color: #666666;
@@ -98,4 +47,61 @@ $mobile-width: 426px;
     border-radius: 10px;
     overflow-y: overlay;
   }
-} ;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  overflow-x: hidden;
+  overflow: overlay;
+  @include scroll;
+
+  @include mobile {
+    @include scrollHidden;
+  }
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.container-L {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-S {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -3,9 +3,9 @@ import {
 } from "react-icons/bs";
 import "./Services.scss";
 
-function PrevArrow({onClick}) {
+function PrevArrow({className, onClick}) {
   return (
-    <BsFillArrowLeftSquareFill onClick={onClick} className="header__arrow-icon header__arrow-left" />
+    <BsFillArrowLeftSquareFill onClick={onClick} className={`${className} header__arrow-icon header__arrow-left`} />
   );
 }
 

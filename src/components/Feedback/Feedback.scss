@@ -31,6 +31,7 @@
     grid-template-columns: repeat(3, 32%);
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 20px;
     overflow: hidden;
 
     @include cus(900px) {
@@ -63,8 +64,6 @@
   .item__avatar {
     width: 64px;
     height: 64px;
-  }
-  .item__infor {
   }
   .item__name {
     font-size: 2.4rem;

@@ -24,6 +24,8 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    gap: 20px;
+    -webkit-column-gap: 20px;
 
     @include cus(900px) {
       &.show {
@@ -41,18 +43,23 @@
 
   // Navbar btn on mobile
   .navbar__btn {
-    display: none;
+    width: 40%;
     margin-left: auto;
     background-color: transparent;
     cursor: pointer;
 
     @include cus(900px) {
-      display: block;
+      width: unset;
     }
 
     .navbar__btn-icon {
+      display: none;
       font-size: 3rem;
       color: $white-color;
+
+      @include cus(900px) {
+        display: block;
+      }
     }
   }
 
@@ -94,15 +101,20 @@
   }
 
   .navbar__logo {
-    width: 184px;
-    height: 73px;
+    width: 40%;
 
-    @include mobile {
-      width: 140px;
-      height: 60px;
+    img {
+      width: 184px;
+      height: 73px;
+
+      @include mobile {
+        width: 140px;
+        height: 60px;
+      }
     }
   }
   .navbar__list {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +141,7 @@
     }
 
     @include mobile {
-        width: 90%;
+      width: 90%;
     }
   }
   .list__item {

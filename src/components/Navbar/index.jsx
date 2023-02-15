@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <nav id="navbar">
-      <div className={`container-L navbar__content ${isShow && 'show'}`}>
+      <div className={`container-L navbar__content ${isShow ? 'show' : ''}`}>
         <a href="/" className="navbar__logo">
           <img src={images.logo} alt="Logo" />
         </a>

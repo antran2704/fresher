@@ -58,12 +58,13 @@
     }
   }
   .header__video {
-    max-width: 1400px;
+    max-width: 1000px;
     padding-top: 60px;
     margin: 0 auto;
 
     video {
       width: 100%;
+      max-height: 800px;
     }
   }
 }
